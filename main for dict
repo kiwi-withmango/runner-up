@@ -1,4 +1,14 @@
-# This code is for determining the runner up in a list of scores
+# This code is for determining the runner up in a list of scores and names and returns the name or names (alphabetical)
+
+scores = {
+
+}
+n = int(input())
+for _ in range(n):
+    name = input()
+    score = float(input())
+    scores[name] = score
+big, sbig = 6000, 6000
 for i in scores:
     if scores[i] < big:
         big, sbig = scores[i], big

@@ -1,0 +1,13 @@
+# This code is for determining the runner up in a list of scores
+for i in scores:
+    if scores[i] < big:
+        big, sbig = scores[i], big
+    elif scores[i] > big and scores[i] < sbig:
+        sbig = scores[i]
+lis = []
+for _ in scores:
+    if scores[_] == sbig:
+        lis.append(_)
+lis = sorted(lis)
+for x in lis:
+    print(x)

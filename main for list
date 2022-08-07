@@ -1,0 +1,11 @@
+# this code returns the runner up score in a list of scores 
+n = int(input())
+arr = input()
+lis = list(map(int, arr.split()))
+big, sbig = -6000, -6000
+for i in lis:
+    if i > big:
+        big, sbig = i, big
+    elif i < big and i > sbig:
+        sbig = i
+print(sbig)
